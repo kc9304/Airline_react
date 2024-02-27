@@ -19,10 +19,7 @@ function App() {
           <Route path="/reg" element={<Register />}/>  \
           <Route path="/home" element={<Home1 />}/> 
           <Route path="/chpa" element={<Chpa />}/>  
-          <Route path="/flight" element={<Flight />}/>  
-
- 
-
+          <Route path="/flight" element={<Flight />}/>                
         </Routes>
         </BrowserRouter>
       </div>
