@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8vh;
+    height: 7vh;
     z-index: 1;
     width: 100vw;
     background-color: black;
@@ -17,7 +17,6 @@
   
   .menu-links h3 {
     padding: 10px;
-    border: 1px solid transparent; 
     color: white; 
   }
   

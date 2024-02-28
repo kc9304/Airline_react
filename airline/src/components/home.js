@@ -19,7 +19,6 @@ import Plane from './images/plane.png';
 
 
 const Home = () => {
- var a= localStorage.getItem("un")
 
     function scrollTopage() {
       const elements = document.getElementsByClassName("prom"); 
@@ -33,16 +32,16 @@ const Home = () => {
   
   return (
     <div >
-      <div style={{ backgroundColor: "black"}} >
+      <div style={{ backgroundColor: "black", backgroundSize:"100vh"}} >
       {/* 𝒦𝒸𝒜𝒾𝓇𝓁𝒾𝓃𝑒𝓈  */}
         <div className='header'>
-          <img style={{ width: "20vw",cursor:"pointer " }} src={Logo} alt='Logo' />
-            <div className="menu-links">
+          <img style={{ width: "18vw",cursor:"pointer ",height:"10vh" }} src={Logo} alt='Logo' />
+            <div style={{ justifyContent:"space-around" }} className="menu-links">
                <Link to="/log">
-               <h3 style={{fontStyle:"monochrome",width:"3vw"}}>Login</h3>
+               <h3 style={{fontStyle:"monochrome",border:"1px solid yellow",fontSize:"1vw"}}>Login</h3>
                 </Link>
                 <Link to="/reg">
-                <h3 style={{fontStyle:"monochrome",width:"3vw",paddingRight:"30px"}}>Signup</h3>
+                <h3 style={{fontStyle:"monochrome",marginRight:"30px",border:"1px solid yellow",fontSize:"1vw"}}>Signup</h3>
                 </Link>
              </div>
       </div>
@@ -81,11 +80,11 @@ const Home = () => {
 
       <div style={{margin:"10px",display:"flex"}} className='brands'>
         <div style={{paddingLeft:"25px",paddingTop:"5px"}} className='b1'>
-              <Card sx={{ width:"18vw" }}>
+              <Card sx={{ maxWidth:"300px" }}>
       <CardActionArea>
         <CardMedia 
           component="img"
-          height="210 vh"
+          height="w-50"
           image="https://pluspng.com/img-png/emirates-airlines-logo-png-latest-job-vacancies-at-emirates-group-dubai-uae-airline-logo-1500x1000.png"
           alt="airlines"
         />
@@ -106,7 +105,7 @@ const Home = () => {
       <CardActionArea>
         <CardMedia 
           component="img"
-          height="200px"
+          height="w-100"
           image="https://www.logo.wine/a/logo/AirAsia_Japan/AirAsia_Japan-Logo.wine.svg"
           alt="airlines"
         />
@@ -127,7 +126,7 @@ const Home = () => {
       <CardActionArea>
         <CardMedia 
           component="img"
-          height="200px"
+          height="w-100"
           image="https://www.logo.wine/a/logo/Jetstar_Japan/Jetstar_Japan-Logo.wine.svg"
           alt="airlines"
         />
@@ -148,7 +147,7 @@ const Home = () => {
       <CardActionArea>
         <CardMedia 
           component="img"
-          height="200px"
+          height="w-100"
           image="https://www.logo.wine/a/logo/IndiGo/IndiGo-Logo.wine.svg"
           alt="airlines"
         />
@@ -172,7 +171,7 @@ const Home = () => {
       <CardActionArea>
         <CardMedia 
           component="img"
-          height="200px"
+          height="w-100"
           image="https://www.logo.wine/a/logo/Air_India/Air_India-Logo.wine.svg"
           alt="airlines"
         />
@@ -193,7 +192,7 @@ const Home = () => {
       <CardActionArea>
         <CardMedia 
           component="img"
-          height="200px"
+          height="w-100"
           image="https://www.logo.wine/a/logo/Vistara/Vistara-Logo.wine.svg"
           alt="airlines"
         />
@@ -214,7 +213,7 @@ const Home = () => {
       <CardActionArea>
         <CardMedia 
           component="img"
-          height="200vh"
+          height="w-100"
           width="50vw"
           image="https://cdn.freebiesupply.com/logos/thumbs/2x/singapore-airlines-1-logo.png"
           alt="airlines"
@@ -236,7 +235,7 @@ const Home = () => {
       <CardActionArea>
         <CardMedia 
           component="img"
-          height="200px"
+          height="w-100"
           image="https://cdn.freebiesupply.com/logos/thumbs/2x/singapore-airlines-1-logo.png"
           alt="airlines"
         />
@@ -256,30 +255,30 @@ const Home = () => {
     <br/>
     <br/>
     <div style={{width:"100vw",height:"40vh",marginBottom:"10px"}} className='about'>
-      <div style={{display:"flex"}} className='abouthead'>
-      <h3 style={{paddingLeft:"200px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"}}>Why KCAirlines?</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style={{paddingLeft:"400px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"}}>Booking Flights </h3>
+      <div style={{display:"flex",justifyContent:"space-around"}} className='abouthead'>
+      <h3 style={{color:"rgb(251, 87, 28)",fontSize:"1.5vw"}}>Why KCAirlines?</h3> <h3 style={{color:"rgb(251, 87, 28)",fontSize:"1.5vw"}}>Booking Flights </h3>
       </div>
-           <div style={{display:"flex"}} className='boxes'>
-      <div style={{height:"27vh",width:"30vw",marginLeft:"45px",fontSize:"13px",color:"#92999f"}} className='box1'>
+           <div style={{display:"flex",justifyContent:"space-around"}} className='boxes'>
+      <div style={{height:"27vh",width:"30vw",fontSize:"13px",color:"#92999f"}} className='box1'>
 
      <p style={{fontSize:"1vw"}}> Founded in 2024  KCAirlines is a startup transforming travel with competitive airfares, exclusive discounts, and a seamless online booking experience. Our user-friendly desktop site and mobile app make booking flights, hotels, and holiday packages a breeze. Enjoy Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and more, tailored to meet evolving customer needs.</p>
       </div>
-      <div style={{height:"27vh",width:"30vw",marginLeft:"240px",fontSize:"13px",color:"#92999f"}} className='box1'>
+      <div style={{height:"27vh",width:"30vw" ,fontSize:"13px",color:"#92999f"}} className='box1'>
 
      <p style={{fontSize:"1vw"}}> Founded in 2024, KCAirlines is a startup transforming travel with competitive airfares, exclusive discounts, and a seamless online booking experience. Our user-friendly desktop site and mobile app make booking flights, hotels, and holiday packages a breeze. Enjoy Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and more, tailored to meet evolving customer needs.</p>
       </div>
       </div>
     </div>
-<div style={{height:"30vw"}} className='fotter'>
+<div style={{height:"30vh",width:"100vw"}} className='fotter'>
 <footer class="footer-distributed">
 			<div class="footer-left">
-				<h3>KC<span>AIRLINES</span></h3>
+				<h3 style={{fontSize:"2vw"}}>KC<span>AIRLINES</span></h3>
 				<p class="footer-links">
-					<a href="#" class="link-1">Home</a>		
-					<a href="#">Pricing</a>
-					<a href="#">About</a>
-					<a href="#">Faq</a>				
-					<a href="#">Contact</a>
+					<a style={{fontSize:"1vw"}} href="#" class="link-1">Home</a>		
+					<a style={{fontSize:"1vw"}} href="#">Pricing</a>
+					<a style={{fontSize:"1vw"}} href="#">About</a>
+					<a style={{fontSize:"1vw"}} href="#">Faq</a>				
+					<a style={{fontSize:"1vw"}} href="#">Contact</a>
 				</p>
 
 			
@@ -289,24 +288,24 @@ const Home = () => {
 
 				<div>
 					<i class="fa fa-map-marker"></i>
-					<p><span>pincode</span> Vijayawda,KLU</p>
+					<p style={{fontSize:"1vw"}}><span>pincode</span> Vijayawda,KLU</p>
 				</div>
 
 				<div>
 					<i class="fa fa-phone"></i>
-					<p>8811002200</p>
+					<p style={{fontSize:"1vw"}}>8811002200</p>
 				</div>
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">Kcairline@company.com</a></p>
+					<p style={{fontSize:"1vw"}}><a href="mailto:support@company.com">Kcairline@company.com</a></p>
 				</div>
 
 			</div>
 
 			<div class="footer-right">
 
-				<p class="footer-company-about">
+				<p style={{fontSize:"0.8vw"}} class="footer-company-about">
 					<span>About the company</span>
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
 				</p>
@@ -327,8 +326,8 @@ const Home = () => {
 
 		</footer>
    < div  style={{width:"100vw",height:"5vh",textAlign:"center",justifyContent:"center"}}className='copy'>
-          <p style={{color:"#ffffff"}}>Copyrigths reserved &nbsp;&nbsp;&nbsp; <span>Kcairline@2024</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <button  style={{backgroundColor:"transparent",color:"white",cursor:"pointer",backgroundColor:"rgb(251, 87, 28)"}}onClick={scrollTopage}>click <FontAwesomeIcon icon={faArrowUp} />  </button> </p>
-         {a}
+          <p style={{color:"black",fontSize:"1.3vw"}}>Copyrigths reserved &nbsp;&nbsp;&nbsp; <span>Kcairline@2024</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <button  style={{backgroundColor:"transparent",color:"white",cursor:"pointer",backgroundColor:"rgb(251, 87, 28)",fontSize:"1vw"}}onClick={scrollTopage}>click <FontAwesomeIcon icon={faArrowUp} />  </button> </p>
+         
         </div>
 
 </div>
