@@ -54,6 +54,9 @@ const Home = () => {
       console.error('Target element not found');
     }
   }
+  function deletefun(){
+    localStorage.removeItem('a','null');
+  }
   return (
     <div style={{ backgroundColor: "black"}}>
       {/* 𝒦𝒸𝒜𝒾𝓇𝓁𝒾𝓃𝑒𝓈  */}
@@ -70,7 +73,7 @@ const Home = () => {
         <a style={{color:"white",fontSize:"1vw"}}href="#">check orders</a>
         <a style={{color:"white",fontSize:"1vw"}} href="/chpa">change password</a>
         
-        <a style={{color:"white",fontSize:"1vw"}}href="/">Logout</a>
+        <a onClick={deletefun} style={{color:"white",fontSize:"1vw"}}href="/">Logout</a>
 
       </div>
     </div> 
@@ -122,7 +125,7 @@ const Home = () => {
     />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </marquee> 
 </div>
-      <div style={{ marginTop: "5px", color: "black", width: "100%", height: "9vh", position: "relative" }} className='header1'>
+      <div style={{ marginTop: "3vh", color: "black", width: "100%", height: "9vh", position: "relative" }} className='header1'>
     <img style={{ width: "100%", height: "9vh" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpaWlQcSrC9WwW8bm593kYxfHt1X77LKwHzA&usqp=CAU' alt='image' />
     <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
         <h3 style={{fontFamily:"monospace", fontSize:"25px"}}>TOP AIRLINES</h3>

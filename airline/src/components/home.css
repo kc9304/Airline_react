@@ -1,5 +1,7 @@
+
+
 .header {
-  position: fixed;
+  position: fixed ;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -9,10 +11,12 @@
     width: 100vw;
     background-color: black;
   }
-  
+  .sub-header{
+    position: relative;
+    top: 90px;
+  }
   .menu-links {
     display: flex;
-    z-index: 2;
   }
   
   .menu-links h3 {

@@ -4,34 +4,20 @@ import REG from './images/reg.jpg';
 import './reg.css';
 
 const Register = () => {
-  const [formData, setFormData] = useState({
-    idun: '',
-    idemail: '',
-    idpw: '',
-    idconfirm: '',
-  });
+ 
 
-  const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({
-      ...formData,
-      [id]: value,
-    });
-  };
-
-  const handleRegister = async (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
+  const handleRegister = async () => {
 
     try {
       const response = await axios.post('http://localhost:8082/insert', {
-        name: formData.idun,
-        email: formData.idemail,
-        password: formData.idpw,
-        password2: formData.idconfirm,
+        name:  document.getElementById("idun").value,
+        email:  document.getElementById("idemail").value,
+        password: document.getElementById("idpw").value,
+        password2: document.getElementById("idconfirm").value,
       });
 
       console.log(response.data);
-      if(response.data == "recived data"){
+      if(response.data == "received data"){
       alert("Successfull Registered  Login!")
       }
       else{
@@ -66,8 +52,6 @@ const Register = () => {
                   type="text"
                   id="idun"
                   placeholder="  Enter Username"
-                  value={formData.idun}
-                  onChange={handleInputChange}
                 />
               </div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
@@ -81,8 +65,7 @@ const Register = () => {
                   type="email"
                   id="idemail"
                   placeholder="  Enter Email"
-                  value={formData.idemail}
-                  onChange={handleInputChange}
+                
                 />
               </div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
@@ -97,8 +80,7 @@ const Register = () => {
                   id="idpw"
                   name="pw"
                   placeholder="  Enter Password"
-                  value={formData.idpw}
-                  onChange={handleInputChange}
+                 
                 />
               </div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
@@ -113,8 +95,7 @@ const Register = () => {
                   id="idconfirm"
                   name="confirm"
                   placeholder="  Confirm Password"
-                  value={formData.idconfirm}
-                  onChange={handleInputChange}
+                 
                 />
               </div>
             </div>
@@ -127,7 +108,7 @@ const Register = () => {
                 color: "black",
                 borderColor: "transparent",
                 height: "4vh",
-                width: "30vh",
+                width: "13vw",
                 backgroundColor: "lightblue",
               }}
             >

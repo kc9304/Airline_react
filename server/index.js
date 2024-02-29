@@ -15,7 +15,7 @@ const col = db.collection('registerhack');
 
 
 app.post('/insert', (req, res) => {
-    if (req.body.un == null) {
+    if (req.body.name == null) {
         res.send("fail");
     } else {
         console.log(req.body);

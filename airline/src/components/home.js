@@ -31,20 +31,23 @@ const Home = () => {
     
   
   return (
-    <div >
+    <div className='body' >
+      
+
       <div style={{ backgroundColor: "black", backgroundSize:"100vh"}} >
       {/* 𝒦𝒸𝒜𝒾𝓇𝓁𝒾𝓃𝑒𝓈  */}
         <div className='header'>
           <img style={{ width: "18vw",cursor:"pointer ",height:"10vh" }} src={Logo} alt='Logo' />
             <div style={{ justifyContent:"space-around" }} className="menu-links">
                <Link to="/log">
-               <h3 style={{fontStyle:"monochrome",border:"1px solid yellow",fontSize:"1vw"}}>Login</h3>
+               <h3 style={{fontStyle:"monochrome",fontSize:"1vw"}}>Login</h3>
                 </Link>
                 <Link to="/reg">
-                <h3 style={{fontStyle:"monochrome",marginRight:"30px",border:"1px solid yellow",fontSize:"1vw"}}>Signup</h3>
+                <h3 style={{fontStyle:"monochrome",marginRight:"30px",fontSize:"1vw"}}>Signup</h3>
                 </Link>
              </div>
       </div>
+      <div className='sub-header'>
       <div  style={{display:"flex"}}className='prom'>
         <div style={{color:"white",width:"80vw",height:"55vh",}} className='promr'>
           <h1 style={{ fontFamily: "monospace",paddingTop:"150px",paddingLeft:"50px",fontSize:"2vw" }}>  WELCOME</h1>
@@ -54,10 +57,10 @@ const Home = () => {
 
         </div>
         <div  style={{width:"50vw"}}className='proml'>
-           <img style={{height:"55vh",width:"50vw"}} src='https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2023/05/best-airports-in-the-world.jpeg?fit=1300%2C730&ssl=1'></img>
+           <img style={{height:"60vh",width:"50vw"}} src='https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2023/05/best-airports-in-the-world.jpeg?fit=1300%2C730&ssl=1'></img>
         </div>
       </div>
-      <div style={{ display: "flex",justifyContent:"center"}} className='logo'>
+      <div style={{ marginTop:"3vh",display: "flex",justifyContent:"center"}} className='logo'>
   <marquee behavior="scroll" direction="right" style={{ width: "100%" }}> 
     <img
       src={Plane}
@@ -70,13 +73,13 @@ const Home = () => {
 </div>
 
 
-      <div style={{  marginTop: "5px", color: "black", width: "100%", height: "9vh", position: "relative" }} className='header1'>
+
+      <div style={{  marginTop: "5vh", color: "black", width: "100%", height: "9vh", position: "relative" }} className='header1'>
     <img style={{ width: "100%", height: "9vh" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpaWlQcSrC9WwW8bm593kYxfHt1X77LKwHzA&usqp=CAU' alt='image' />
     <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
         <h3 style={{fontFamily:"monospace", fontSize:"2vw"}}>TOP AIRLINES</h3>
     </div>
 </div>
-
 
       <div style={{margin:"10px",display:"flex"}} className='brands'>
         <div style={{paddingLeft:"25px",paddingTop:"5px"}} className='b1'>
@@ -332,10 +335,11 @@ const Home = () => {
 
 </div>
     </div>
+    </div>
+    </div>
   
    
 
-    </div>
   );
 };
 
