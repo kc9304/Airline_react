@@ -13,6 +13,8 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import Plane from './images/plane.png';
+import Video from './images/video.mp4';
+
 
 
   
@@ -86,6 +88,7 @@ const Home = () => {
            */}
         </div>
       </div>
+      
       <div className='header1'>
         <img style={{ width: "40vh" }} src={Logo} alt='Logo' />
 
@@ -97,6 +100,7 @@ const Home = () => {
         <a onClick={scrollTopage1} style={{color:"white",fontSize:"1vw"}}href="#">Airline</a>
         <a onClick={scrollTopage2} style={{color:"white",fontSize:"1vw"}}href="#">Contact</a>
       </div>
+    
       </div> 
            <h4 style={{color:"#ffffff",paddingRight:"5vw",fontSize:"1vw",fontFamily:"monospace"}}>Welcome, <span style={{color:"rgb(251, 87, 28)"}}>{a}</span></h4>
         </div>
@@ -134,179 +138,171 @@ const Home = () => {
 
 
 <div style={{margin:"10px",display:"flex"}} className='brands'>
-        <div style={{paddingLeft:"25px",paddingTop:"5px"}} className='b1'>
-              <Card sx={{ maxWidth:"300px" }}>
-      <CardActionArea>
-        <CardMedia 
-          component="img"
-          height="w-50"
-          image="https://pluspng.com/img-png/emirates-airlines-logo-png-latest-job-vacancies-at-emirates-group-dubai-uae-airline-logo-1500x1000.png"
-          alt="airlines"
-        />
-        <CardContent style={{backgroundColor:"black"}}>
-          <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
-            Emirates
-          </Typography>
-          <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div style={{paddingLeft:"25px",paddingTop:"5px"}} className='b1'>
+        <Card sx={{ maxWidth:"300px" }}>
+            <CardActionArea>
+                <CardMedia 
+                    component="img"
+                    height="w-50"
+                    image="https://pluspng.com/img-png/emirates-airlines-logo-png-latest-job-vacancies-at-emirates-group-dubai-uae-airline-logo-1500x1000.png"
+                    alt="airlines"
+                />
+                <CardContent style={{backgroundColor:"black"}}>
+                    <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
+                        Emirates
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
+                        Emirates is a leading airline based in Dubai, United Arab Emirates. Known for its luxurious services and extensive global network, Emirates has been a pioneer in the aviation industry. With a fleet of modern aircraft.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     </div>
-    <div style={{paddingLeft:"70px",paddingTop:"5px"}}className='b2'>
-    <Card sx={{ maxWidth:"300px" }}>
-      <CardActionArea>
-        <CardMedia 
-          component="img"
-          height="w-100"
-          image="https://www.logo.wine/a/logo/AirAsia_Japan/AirAsia_Japan-Logo.wine.svg"
-          alt="airlines"
-        />
-        <CardContent style={{backgroundColor:"black"}}>
-          <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
-          AirAsia
-          </Typography>
-          <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div style={{paddingLeft:"70px",paddingTop:"5px"}} className='b2'>
+        <Card sx={{ maxWidth:"300px" }}>
+            <CardActionArea>
+                <CardMedia 
+                    component="img"
+                    height="w-100"
+                    image="https://www.logo.wine/a/logo/AirAsia_Japan/AirAsia_Japan-Logo.wine.svg"
+                    alt="airlines"
+                />
+                <CardContent style={{backgroundColor:"black"}}>
+                    <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
+                        AirAsia
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
+                        AirAsia is a low-cost airline headquartered in Malaysia. With a focus on affordability and accessibility, AirAsia has become one of the largest budget carriers in Asia. Offering a wide range of destinations and innovative services.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     </div>
-    <div style={{paddingLeft:"70px",paddingTop:"5px"}}className='b3'>
-    <Card sx={{ maxWidth:"300px" }}>
-      <CardActionArea>
-        <CardMedia 
-          component="img"
-          height="w-100"
-          image="https://www.logo.wine/a/logo/Jetstar_Japan/Jetstar_Japan-Logo.wine.svg"
-          alt="airlines"
-        />
-        <CardContent style={{backgroundColor:"black"}}>
-          <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
-            JetStar
-          </Typography>
-          <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div style={{paddingLeft:"70px",paddingTop:"5px"}} className='b3'>
+        <Card sx={{ maxWidth:"300px" }}>
+            <CardActionArea>
+                <CardMedia 
+                    component="img"
+                    height="w-100"
+                    image="https://www.logo.wine/a/logo/Jetstar_Japan/Jetstar_Japan-Logo.wine.svg"
+                    alt="airlines"
+                />
+                <CardContent style={{backgroundColor:"black"}}>
+                    <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
+                        JetStar
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
+                        JetStar is a low-cost airline known for its affordable travel options. With a diverse range of destinations and a focus on customer satisfaction, JetStar provides budget-friendly travel opportunities .
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     </div>
     <div style={{paddingLeft:"100px",paddingTop:"5px"}} className='b4'>
-    <Card sx={{ maxWidth:"300px" }}>
-      <CardActionArea>
-        <CardMedia 
-          component="img"
-          height="w-100"
-          image="https://www.logo.wine/a/logo/IndiGo/IndiGo-Logo.wine.svg"
-          alt="airlines"
-        />
-        <CardContent style={{backgroundColor:"black"}}>
-          <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
-            IndiGo
-          </Typography>
-          <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+        <Card sx={{ maxWidth:"300px" }}>
+            <CardActionArea>
+                <CardMedia 
+                    component="img"
+                    height="w-100"
+                    image="https://www.logo.wine/a/logo/IndiGo/IndiGo-Logo.wine.svg"
+                    alt="airlines"
+                />
+                <CardContent style={{backgroundColor:"black"}}>
+                    <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
+                        IndiGo
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
+                        IndiGo is a prominent low-cost airline in India. Recognized for its punctuality and efficiency, IndiGo offers affordable and reliable air travel. With a modern fleet and a commitment to customer satisfaction.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     </div>
+</div>
+<br/>
+<div style={{margin:"10px",display:"flex"}} className='brands'>
+    <div style={{paddingLeft:"25px",paddingTop:"5px"}} className='b1'>
+        <Card sx={{ maxWidth:"300px" }}>
+            <CardActionArea>
+                <CardMedia 
+                    component="img"
+                    height="w-100"
+                    image="https://www.logo.wine/a/logo/Air_India/Air_India-Logo.wine.svg"
+                    alt="airlines"
+                />
+                <CardContent style={{backgroundColor:"black"}}>
+                    <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
+                        AirIndia
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
+                        AirIndia is India's flagship carrier with a rich history and global presence. Offering a blend of traditional hospitality and modern amenities, AirIndia connects passengers to a wide array of destinations.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     </div>
-    <br/>
-    <div style={{margin:"10px",display:"flex"}} className='brands'>
-        <div style={{paddingLeft:"25px",paddingTop:"5px"}} className='b1'>
-              <Card sx={{ maxWidth:"300px" }}>
-      <CardActionArea>
-        <CardMedia 
-          component="img"
-          height="w-100"
-          image="https://www.logo.wine/a/logo/Air_India/Air_India-Logo.wine.svg"
-          alt="airlines"
-        />
-        <CardContent style={{backgroundColor:"black"}}>
-          <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
-            AirIndia
-          </Typography>
-          <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div style={{paddingLeft:"70px",paddingTop:"5px"}} className='b2'>
+        <Card sx={{ maxWidth:"300px" }}>
+            <CardActionArea>
+                <CardMedia 
+                    component="img"
+                    height="w-100"
+                    image="https://www.logo.wine/a/logo/Vistara/Vistara-Logo.wine.svg"
+                    alt="airlines"
+                />
+                <CardContent style={{backgroundColor:"black"}}>
+                    <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
+                        Vistara
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
+                        Vistara is a premium airline in India known for its luxury services and attention to detail. With a commitment to providing a seamless and delightful travel experience.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     </div>
-    <div style={{paddingLeft:"70px",paddingTop:"5px"}}className='b2'>
-    <Card sx={{ maxWidth:"300px" }}>
-      <CardActionArea>
-        <CardMedia 
-          component="img"
-          height="w-100"
-          image="https://www.logo.wine/a/logo/Vistara/Vistara-Logo.wine.svg"
-          alt="airlines"
-        />
-        <CardContent style={{backgroundColor:"black"}}>
-          <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
-            Vistara
-          </Typography>
-          <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    </div>
-    <div style={{paddingLeft:"70px",paddingTop:"5px"}}className='b3'>
-    <Card sx={{ maxWidth:"300px" }}>
-      <CardActionArea>
-        <CardMedia 
-          component="img"
-          height="w-100"
-          width="50vw"
-          image="https://cdn.freebiesupply.com/logos/thumbs/2x/singapore-airlines-1-logo.png"
-          alt="airlines"
-        />
-        <CardContent style={{backgroundColor:"black"}}>
-          <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
-            Singapre airlines
-          </Typography>
-          <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div style={{paddingLeft:"70px",paddingTop:"5px"}} className='b3'>
+        <Card sx={{ maxWidth:"300px" }}>
+            <CardActionArea>
+                <CardMedia 
+                    component="img"
+                    height="w-100"
+                    width="50vw"
+                    image="https://cdn.freebiesupply.com/logos/thumbs/2x/singapore-airlines-1-logo.png"
+                    alt="airlines"
+                />
+                <CardContent style={{backgroundColor:"black"}}>
+                    <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
+                        Singapore Airlines
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
+                        Singapore Airlines is a world-renowned carrier synonymous with luxury and excellence. Offering impeccable service and a wide network of destinations, Singapore Airlines is a leader in the aviation industry.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     </div>
     <div style={{paddingLeft:"100px",paddingTop:"5px"}} className='b4'>
-    <Card sx={{ maxWidth:"300px" }}>
-      <CardActionArea>
-        <CardMedia 
-          component="img"
-          height="w-100"
-          image="https://cdn.freebiesupply.com/logos/thumbs/2x/singapore-airlines-1-logo.png"
-          alt="airlines"
-        />
-        <CardContent style={{backgroundColor:"black"}}>
-          <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
-            Singapre airlines
-          </Typography>
-          <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+        <Card sx={{ maxWidth:"300px" }}>
+            <CardActionArea>
+                <CardMedia 
+                    component="img"
+                    height="w-100"
+                    image="https://cdn.freebiesupply.com/logos/thumbs/2x/singapore-airlines-1-logo.png"
+                    alt="airlines"
+                />
+                <CardContent style={{backgroundColor:"black"}}>
+                    <Typography gutterBottom variant="h5" component="div" style={{color:"white",fontSize:"2vw"}}>
+                        Singapore Airlines
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{color:"white",fontSize:"1vw"}}>
+                        Singapore Airlines is a world-renowned carrier synonymous with luxury and excellence. Offering impeccable service and a wide network of destinations, Singapore Airlines is a leader in the aviation industry. Travel with Singapore Airlines .
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     </div>
-    </div>
+</div>
     <br/>
     <br/>
     <div style={{width:"100vw",height:"40vh",marginBottom:"10px"}} className='about'>
@@ -323,6 +319,25 @@ const Home = () => {
      <p style={{fontSize:"1vw"}}> Founded in 2024, KCAirlines is a startup transforming travel with competitive airfares, exclusive discounts, and a seamless online booking experience. Our user-friendly desktop site and mobile app make booking flights, hotels, and holiday packages a breeze. Enjoy Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and more, tailored to meet evolving customer needs.</p>
       </div>
       </div>
+    </div>
+    <div style={{width:"100vw",height:"45vh",display:"flex"}} className='part'>
+      <div style={{width:"50vw",height:"45vh",margin:"1vh"}} className='part1'>
+          <video  autoPlay muted loop style={{width:"50vw",height:"40vh"}} id="background-video1">
+            <source src={Video} type="video/mp4" />
+          </video>
+
+      </div>
+      <div style={{width:"50vw",height:"45vh",margin:"1vh",alignItems:"center",display:"flex",justifyContent:"center"}} className='part1'>
+        <div style={{margin:"1vh",width:"30vw",height:"30vh"}} className='matter'>
+          <h4 style={{color:"rgb(251, 87, 28)",fontSize:"1.5vw"}}>  Your comfort is our priority</h4>
+          <p style={{color:"white",fontSize:"1vw"}}> We are providing you the most comfortable flight ticket booking application ever.</p>
+
+        </div>
+          
+
+      </div>
+
+
     </div>
 <div style={{height:"30vh",width:"100vw"}} className='fotter'>
 <footer class="footer-distributed">
