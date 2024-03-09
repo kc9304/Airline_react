@@ -5,7 +5,11 @@ import Home1 from './components/home1';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Register from './components/register';
 import Chpa from './components/chpa';
-import Flight from './components/flights';
+import Flight from './components/bookticket';
+import Admin from './components/admin';
+import Airinfo from './components/airinfo';
+
+
 
 //first letter captail
 function App() {
@@ -19,7 +23,11 @@ function App() {
           <Route path="/reg" element={<Register />}/>  \
           <Route path="/home" element={<Home1 />}/> 
           <Route path="/chpa" element={<Chpa />}/>  
-          <Route path="/flight" element={<Flight />}/>                
+          <Route path="/botc" element={<Flight />}/> 
+          <Route path="/admin" element={<Admin />}/>    
+          <Route path="/airinfo" element={<Airinfo />}/>                
+            
+               
         </Routes>
         </BrowserRouter>
       </div>

@@ -22,6 +22,12 @@ import { useNavigate } from 'react-router-dom';
     if (res.data === "PASS") {
       localStorage.setItem("un",document.getElementById("idun").value)
       navigate('/home');
+    }
+    else if(res.data=="ADMIN"){
+      localStorage.setItem("un",document.getElementById("idun").value)
+      navigate('/admin');
+
+
     } else {
       alert("User not found. Register!");
     }

@@ -27,7 +27,6 @@ const Register = () => {
 
     } catch (error) {
       console.error('Error during registration:', error);
-      // Handle the error (e.g., show error message to the user)
     }
   };
 

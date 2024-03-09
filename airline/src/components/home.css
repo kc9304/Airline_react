@@ -18,6 +18,31 @@
   .menu-links {
     display: flex;
   }
+  .insertdata {
+    height: 60vh;
+    width: 100vw;
+  } 
+  
+  .inside {
+    width: 50vw;
+    height: 50vh;
+    padding: 20px; /* Adjust padding as needed */
+  }
+  
+  .inside h4 {
+    margin-bottom: 10px; /* Adjust margin as needed */
+  }
+  
+  .inside input {
+    width: 40%;
+    padding: 8px;
+    margin-bottom: 15px; /* Adjust margin as needed */
+    box-sizing: border-box;
+    border-radius: 40px;
+  }
+  
+  /* Add any additional styling as needed */
+  
   
   .menu-links h3 {
     padding: 10px;

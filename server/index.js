@@ -12,6 +12,8 @@ const client = new MongoClient('mongodb+srv://admin:admin@cluster0.rzddyty.mongo
 client.connect();
 const db = client.db('s31');
 const col = db.collection('registerhack');
+const col1 = db.collection('infohack');
+
 
 
 app.post('/insert', (req, res) => {
@@ -23,6 +25,31 @@ app.post('/insert', (req, res) => {
         res.send("received data");
     }
 });
+app.get('/show',async(req,res)=>{
+    var result = await col1.find().toArray();
+    res.send(result);
+})
+
+app.delete('/delete',async(req,res)=>{
+    console.log(req.query.name)
+
+     var result=await col1.findOne({"num":req.query.num})
+//    await col.deleteOne({
+//         id:req.query.id
+//     }) orginal syntax
+    col.deleteOne(result)
+    res.send("deleted successfully")
+
+})
+app.post('/admininsert', (req, res) => {
+    if (req.body.desname == null) {
+        res.send("fail");
+    } else {
+        console.log(req.body);
+        col1.insertOne(req.body);
+        res.send("received data");
+    }
+});
 
 app.post('/check', async (req, res) => {
     try {
@@ -30,8 +57,11 @@ app.post('/check', async (req, res) => {
 
         if (result == null) {
             res.send("user not available");
-        } else if (result.password == req.body.pw) {
-           
+        }
+        if(req.body.un=="krishna"){
+            res.send("ADMIN");
+        } 
+        else if (result.password == req.body.pw) {
                     res.send("PASS");
         }
     } catch (error) {
