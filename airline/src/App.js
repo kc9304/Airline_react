@@ -11,6 +11,8 @@ import Airinfo from './components/airinfo';
 
 
 
+
+
 //first letter captail
 function App() {
   function Page(){
@@ -25,7 +27,7 @@ function App() {
           <Route path="/chpa" element={<Chpa />}/>  
           <Route path="/botc" element={<Flight />}/> 
           <Route path="/admin" element={<Admin />}/>    
-          <Route path="/airinfo" element={<Airinfo />}/>                
+          <Route path="/airinfo" element={<Airinfo />}/>  
             
                
         </Routes>

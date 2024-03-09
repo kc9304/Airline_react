@@ -34,7 +34,7 @@ const Airinfo = () => {
     
     function handleDelete(event){
         alert(event.currentTarget.getAttribute("ref1"))
-        axios.delete('http://localhost:8081/delete',{
+        axios.delete('http://localhost:8082/delete',{
           params:{
             name:event.currentTarget.getAttribute("ref1")
           }
