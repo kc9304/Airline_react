@@ -25,22 +25,60 @@ app.post('/insert', (req, res) => {
         res.send("received data");
     }
 });
+
+
+app.post('/coninsert', async (req, res) => {
+    console.log(req.body);
+    const { desname1, ariname1, date1 } = req.body;
+
+    try {
+        const existingFlights = await col1.find({
+            $and: [
+                { "date": date1 },
+                { "desname": desname1 },
+                { "ariname": ariname1 }
+            ]
+        }).toArray();
+        console.log(existingFlights)
+        if (existingFlights.length > 0) {
+            // There are flights available for the specified date and cities
+            // You can process the existing flights or send them as a response
+            res.send(existingFlights);
+        } else {
+            // No flights available for the specified date and cities
+            res.json({ success: false, message: "No available flights for the specified date and cities." });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: "Internal Server Error" });
+    }
+});
+
 app.get('/show',async(req,res)=>{
     var result = await col1.find().toArray();
     res.send(result);
 })
 
-app.delete('/delete',async(req,res)=>{
-    console.log(req.query.name)
+app.delete('/delete', async (req, res) => {
+    console.log(req.query.name);
 
-     var result=await col1.findOne({"num":req.query.num})
-//    await col.deleteOne({
-//         id:req.query.id
-//     }) orginal syntax
-    col.deleteOne(result)
-    res.send("deleted successfully")
+    try {
+        const result = await col1.deleteOne({ "num": req.query.name });
 
-})
+        if (result.deletedCount === 1) {
+            res.send("Deleted successfully");
+            console.log("done");
+        } else {
+            res.send("No matching document found");
+            console.log("no");
+
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
 app.post('/admininsert', (req, res) => {
     if (req.body.desname == null) {
         res.send("fail");
