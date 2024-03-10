@@ -106,7 +106,7 @@ const Admin = () => {
       <div style={{ marginTop: "3vh", color: "black", width: "100%", height: "9vh", position: "relative" }} className='header1'>
     <img style={{ width: "100%", height: "9vh" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpaWlQcSrC9WwW8bm593kYxfHt1X77LKwHzA&usqp=CAU' alt='image' />
     <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
-        <h3 style={{fontFamily:"monospace", fontSize:"25px"}}>Airline CRUD Operations</h3>
+        <h3 style={{fontFamily:"monospace", fontSize:"25px"}}>View AIRLINES</h3>
     </div>
     <div style={{height:"80vh",width:"100vw",display:"flex",justifyContent:"center",alignItems:"center",border:"1px solid red"}} className='insertdata'>
         <div style={{width:"50vw",height:"50vh",display: 'flex', flexDirection: 'column', alignItems: 'center',marginBottom:"25vh"}} className='inside'>

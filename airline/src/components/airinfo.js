@@ -76,7 +76,7 @@ const Airinfo = () => {
 
                     <div style={{ display: "flex", justifyContent: "space-between" }} className="menu-links">
                         <div className='left'>
-                            <h4 style={{ color: "white", paddingLeft: "2vw" }}>Admin page</h4>
+                            <h4 style={{ color: "white", paddingLeft: "2vw",fontSize:"1vw" }}>Admin page</h4>
                         </div>
                         <h4 style={{ color: "#ffffff", paddingRight: "5vw", fontSize: "1vw", fontFamily: "monospace" }}>Welcome, <span style={{ color: "rgb(251, 87, 28)" }}>{username}</span></h4>
                     </div>
@@ -84,32 +84,32 @@ const Airinfo = () => {
                 <div style={{ marginTop: "3vh", color: "black", width: "100%", height: "9vh", position: "relative" }} className='header1'>
                     <img style={{ width: "100%", height: "9vh" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpaWlQcSrC9WwW8bm593kYxfHt1X77LKwHzA&usqp=CAU' alt='image' />
                     <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
-                        <h3 style={{ fontFamily: "monospace", fontSize: "25px" }}>Airline Details</h3>
+                        <h3 style={{ fontFamily: "monospace", fontSize: "25px",fontSize:"1.5vw" }}>Airline Details</h3>
                     </div>
                 </div>
                 <table style={{ color: "blue", border: "1px solid white", width: "100%", borderCollapse: "collapse" }}>
     <thead style={{ backgroundColor: "black", color: "white" }}>
         <tr>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" }}>ID</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" }}>Departure City</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" }}>Arrival City</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" }}>Departure Date</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" }}>Airline Name</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" }}>Airline Time</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" }}>Delete</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" ,fontSize:"1.5vw" }}>ID</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Departure City</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Arrival City</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Departure Date</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Airline Name</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Airline Time</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Delete</th>
 
         </tr>
     </thead>
     <tbody>
     {r.map((user) => (
             <tr key={user._id}>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white" }}>{user.num}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white" }}>{user.desname}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white" }}>{user.ariname}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white" }}>{user.date}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white" }}>{user.airline}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white" }}>{user.time}</td>
-                <td><button style={{backgroundColor:"transparent",borderRadius:"30px",color:"white"}} onClick={handleDelete} ref1={user.num}>delete</button></td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw" }}>{user.num}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.desname}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.ariname}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.date}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.airline}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.time}</td>
+                <td><button style={{backgroundColor:"transparent",borderRadius:"30px",color:"white",fontSize:"1vw" }} onClick={handleDelete} ref1={user.num}>delete</button></td>
 
             </tr>
         ))}

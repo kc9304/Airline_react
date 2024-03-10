@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.use(cors());
 
+
 const client = new MongoClient('mongodb+srv://admin:admin@cluster0.rzddyty.mongodb.net/?retryWrites=true&w=majority');
 client.connect();
 const db = client.db('s31');

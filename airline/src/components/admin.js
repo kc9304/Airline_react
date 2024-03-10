@@ -90,7 +90,7 @@ const admin = () => {
 
         <div style={{display:"flex",justifyContent:"space-between",}} className="menu-links">
         <div className='left'>
-            <h4 style={{color:"white",paddingLeft:"2vw"}}>Admin page</h4>
+            <h4 style={{color:"white",paddingLeft:"2vw",fontSize:"1vw"}}>Admin page</h4>
         </div>
            <h4 style={{color:"#ffffff",paddingRight:"5vw",fontSize:"1vw",fontFamily:"monospace"}}>Welcome, <span style={{color:"rgb(251, 87, 28)"}}>{a}</span></h4>
         </div>
@@ -98,19 +98,19 @@ const admin = () => {
       <div style={{ marginTop: "3vh", color: "black", width: "100%", height: "9vh", position: "relative" }} className='header1'>
     <img style={{ width: "100%", height: "9vh" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpaWlQcSrC9WwW8bm593kYxfHt1X77LKwHzA&usqp=CAU' alt='image' />
     <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
-        <h3 style={{fontFamily:"monospace", fontSize:"25px"}}>Airline CRUD Operations</h3>
+        <h3 style={{fontFamily:"monospace", fontSize:"1.5vw"}}>Add Airline </h3>
     </div>
     <div style={{height:"80vh",width:"100vw",display:"flex",justifyContent:"center",alignItems:"center",border:"1px solid red"}} className='insertdata'>
         <div style={{width:"50vw",height:"50vh",display: 'flex', flexDirection: 'column', alignItems: 'center',marginBottom:"25vh"}} className='inside'>
-            <h4 style={{color:" rgb(251, 87, 28)"}}>Departure city</h4>
+            <h4 style={{color:" rgb(251, 87, 28)",fontSize:"1vw"}}>Departure city</h4>
             <input type='text' id='desname'placeholder='Select Departure city'  ></input>
-            <h4 style={{color:"rgb(251, 87, 28)"}}>Arrival city</h4>    
+            <h4 style={{color:"rgb(251, 87, 28)",fontSize:"1vw"}}>Arrival city</h4>    
             <input type='text' id='ariname'placeholder='Select Arrival city'  ></input>
-            <h4 style={{color:"rgb(251, 87, 28)"}}>Airline Number</h4>
+            <h4 style={{color:"rgb(251, 87, 28)",fontSize:"1vw"}}>Airline Number</h4>
             <input type='number' id='num'placeholder='Type the airplane number'  ></input>
-            <h4 style={{color:"rgb(251, 87, 28)"}}>Departure Date</h4>
+            <h4 style={{color:"rgb(251, 87, 28)",fontSize:"1vw"}}>Departure Date</h4>
             <input type='date' id='date'placeholder='Select departure date'  ></input>
-            <h4 style={{color:"rgb(251, 87, 28)"}}>Airline</h4>
+            <h4 style={{color:"rgb(251, 87, 28)",fontSize:"1vw"}}>Airline</h4>
             <select style={{width:"10vw"}} id='airline' placeholder='Select Airline'>
             <option value='emirates'>Emirates</option>
             <option value='airasia'>Air Asia</option>
