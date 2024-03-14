@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Airline_react/static/css/main.4f37fc61.css",
-    "main.js": "/Airline_react/static/js/main.1e81560a.js",
+    "main.js": "/Airline_react/static/js/main.5d2d240c.js",
     "static/js/651.fd1e7684.chunk.js": "/Airline_react/static/js/651.fd1e7684.chunk.js",
     "static/media/video.mp4": "/Airline_react/static/media/video.95158e0f69d6ba88629e.mp4",
     "static/media/one.webm": "/Airline_react/static/media/one.c9ac7e4e5d1caf5904ab.webm",
@@ -9,11 +9,11 @@
     "static/media/logo.jpg": "/Airline_react/static/media/logo.bdd51e5cfb2654f71e4a.jpg",
     "index.html": "/Airline_react/index.html",
     "main.4f37fc61.css.map": "/Airline_react/static/css/main.4f37fc61.css.map",
-    "main.1e81560a.js.map": "/Airline_react/static/js/main.1e81560a.js.map",
+    "main.5d2d240c.js.map": "/Airline_react/static/js/main.5d2d240c.js.map",
     "651.fd1e7684.chunk.js.map": "/Airline_react/static/js/651.fd1e7684.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4f37fc61.css",
-    "static/js/main.1e81560a.js"
+    "static/js/main.5d2d240c.js"
   ]
 }
