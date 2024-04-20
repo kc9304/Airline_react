@@ -86,7 +86,6 @@ const admin = () => {
           </div>
         </div>
         <div className='header1'>
-        <img style={{ width: "40vh" }} src={Logo} alt='Logo' />
 
         <div style={{display:"flex",justifyContent:"space-between",}} className="menu-links">
         <div className='left'>
@@ -100,7 +99,7 @@ const admin = () => {
     <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
         <h3 style={{fontFamily:"monospace", fontSize:"1.5vw"}}>Add Airline </h3>
     </div>
-    <div style={{height:"80vh",width:"100vw",display:"flex",justifyContent:"center",alignItems:"center",border:"1px solid red"}} className='insertdata'>
+    <div style={{height:"90vh",width:"100vw",display:"flex",justifyContent:"center",alignItems:"center",border:"1px solid red"}} className='insertdata'>
         <div style={{width:"50vw",height:"50vh",display: 'flex', flexDirection: 'column', alignItems: 'center',marginBottom:"25vh"}} className='inside'>
             <h4 style={{color:" rgb(251, 87, 28)",fontSize:"1vw"}}>Departure city</h4>
             <input type='text' id='desname'placeholder='Select Departure city'  ></input>
@@ -128,7 +127,7 @@ const admin = () => {
             
     
     
-    <div style={{height:"30vh",width:"100vw",marginTop:"80vh"}} className='fotter'>
+    <div style={{height:"30vh",width:"100vw",marginTop:"90vh"}} className='fotter'>
     <footer class="footer-distributed">
               <div class="footer-left">
                   <h3 style={{fontSize:"2vw"}}>KC<span>AIRLINES</span></h3>

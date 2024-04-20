@@ -72,7 +72,6 @@ const Airinfo = () => {
                     </div>
                 </div>
                 <div className='header1'>
-                    <img style={{ width: "40vh" }} src={Logo} alt='Logo' />
 
                     <div style={{ display: "flex", justifyContent: "space-between" }} className="menu-links">
                         <div className='left'>
@@ -87,6 +86,7 @@ const Airinfo = () => {
                         <h3 style={{ fontFamily: "monospace", fontSize: "25px",fontSize:"1.5vw" }}>Airline Details</h3>
                     </div>
                 </div>
+                <div style={{width:"90vw",marginLeft:"5vw",marginTop:"3vh"}}>
                 <table style={{ color: "blue", border: "1px solid white", width: "100%", borderCollapse: "collapse" }}>
     <thead style={{ backgroundColor: "black", color: "white" }}>
         <tr>
@@ -115,6 +115,7 @@ const Airinfo = () => {
         ))}
     </tbody>
 </table>
+</div>
 <div style={{height:"30vh",width:"100vw",marginTop:"40vh"}} className='fotter'>
     <footer class="footer-distributed">
               <div class="footer-left">

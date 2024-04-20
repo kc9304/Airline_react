@@ -52,8 +52,8 @@ const Home = () => {
       <div className='sub-header'>
       <div  style={{display:"flex"}}className='prom'>
         <div style={{color:"white",width:"80vw",height:"55vh",}} className='promr'>
-          <h1 style={{ fontFamily: "monospace",paddingTop:"150px",paddingLeft:"50px",fontSize:"2vw" }}>  WELCOME</h1>
-          <h1 style={{paddingLeft:"150px",fontFamily:"monospace",paddingTop:"5px",fontSize:"2vw"}}> TO KC<span style={{color:"rgb(251, 87, 28)"}}>AIRLINES</span>  <h3 style={{paddingLeft:"5px",fontFamily:"monospace",fontSize:"1vw"}}> All airlines in one search </h3> </h1>
+          <h1 style={{ fontFamily: "monospace",paddingTop:"10vw",paddingLeft:"5vw",fontSize:"2vw" }}>  WELCOME</h1>
+          <h1 style={{paddingLeft:"10vw",fontFamily:"monospace",paddingTop:"2vh",fontSize:"2vw"}}> TO KC<span style={{color:"rgb(251, 87, 28)"}}>AIRLINES</span>  <h3 style={{paddingLeft:"5px",fontFamily:"monospace",fontSize:"1vw"}}> All airlines in one search </h3> </h1>
           {/* <h3 style={{paddingLeft:"150px",fontFamily:"monospace",fontSize:"12px"}}> All airlines in one search </h3> */}
 
 
@@ -84,8 +84,8 @@ const Home = () => {
 </div>
 
 <div style={{margin:"10px",display:"flex"}} className='brands'>
-    <div style={{paddingLeft:"25px",paddingTop:"5px"}} className='b1'>
-        <Card sx={{ maxWidth:"300px" }}>
+    <div style={{paddingLeft:"3vw",paddingTop:"5px"}} className='b1'>
+        <Card sx={{ maxWidth:"20vw" }}>
             <CardActionArea>
                 <CardMedia 
                     component="img"

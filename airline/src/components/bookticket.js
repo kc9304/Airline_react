@@ -94,7 +94,6 @@ const Admin = () => {
           </div>
         </div>
         <div className='header1'>
-        <img style={{ width: "40vh" }} src={Logo} alt='Logo' />
 
         <div style={{display:"flex",justifyContent:"space-between",}} className="menu-links">
         <div className='left'>
@@ -128,8 +127,8 @@ const Admin = () => {
 
     </div>
 </div>
-<div style={{marginTop:"60vh"}} className='table'>
-<table style={{ color: "blue", border: "1px solid white", width: "100%", borderCollapse: "collapse" }}>
+<div style={{marginTop:"60vh",width:"90vw"}} className='table'>
+<table style={{ color: "blue", border: "1px solid white", width: "100%", borderCollapse: "collapse",margin:"5vw" }}>
   <thead style={{ backgroundColor: "black", color: "white" }}>
     <tr>
       <th style={{ border: "1px solid white", padding: "8px", color: "rgb(251, 87, 28)" }}>ID</th>

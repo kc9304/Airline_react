@@ -92,7 +92,6 @@ const Home = () => {
       </div>
       
       <div className='header1'>
-        <img style={{ width: "40vh" }} src={Logo} alt='Logo' />
 
         <div style={{display:"flex",justifyContent:"space-between",}} className="menu-links">
         <div  class="dropdown1 ">

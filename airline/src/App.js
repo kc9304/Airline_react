@@ -2,12 +2,13 @@ import Login from './components/login';
 import Home from './components/home';
 import Home1 from './components/home1';
 
-import {HashRouter, Routes, Route} from 'react-router-dom'
+import { Routes, Route, BrowserRouter} from 'react-router-dom'
 import Register from './components/register';
 import Chpa from './components/chpa';
 import Flight from './components/bookticket';
 import Admin from './components/admin';
 import Airinfo from './components/airinfo';
+import Error from './components/Error'
 
 
 
@@ -18,7 +19,7 @@ function App() {
   function Page(){
     return (
       <div>
-        <HashRouter>
+        <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/log" element={<Login />}/>  
@@ -28,10 +29,13 @@ function App() {
           <Route path="/botc" element={<Flight />}/> 
           <Route path="/admin" element={<Admin />}/>    
           <Route path="/airinfo" element={<Airinfo />}/>  
+          <Route path="/error" element={<Error />}/>  
+
+
             
                
         </Routes>
-        </HashRouter>
+        </BrowserRouter>
       </div>
     );
   }
