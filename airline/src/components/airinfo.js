@@ -73,7 +73,7 @@ const Airinfo = () => {
                 </div>
                 <div className='header1'>
 
-                    <div style={{ display: "flex", justifyContent: "space-between" }} className="menu-links">
+                <div style={{display:"flex",justifyContent:"space-between",paddingTop:"10vh"}} className="menu-links">
                         <div className='left'>
                             <h4 style={{ color: "white", paddingLeft: "2vw",fontSize:"1vw" }}>Admin page</h4>
                         </div>

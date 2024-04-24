@@ -8,7 +8,8 @@ import Chpa from './components/chpa';
 import Flight from './components/bookticket';
 import Admin from './components/admin';
 import Airinfo from './components/airinfo';
-import Error from './components/Error'
+import Orderd from './components/orderdetails';
+
 
 
 
@@ -28,8 +29,9 @@ function App() {
           <Route path="/chpa" element={<Chpa />}/>  
           <Route path="/botc" element={<Flight />}/> 
           <Route path="/admin" element={<Admin />}/>    
-          <Route path="/airinfo" element={<Airinfo />}/>  
-          <Route path="/error" element={<Error />}/>  
+          <Route path="/airinfo" element={<Airinfo />}/>
+          <Route path="/orderd" element={<Orderd />}/>  
+  
 
 
             
