@@ -14,6 +14,8 @@ client.connect();
 const db = client.db('s31');
 const col = db.collection('registerhack');
 const col1 = db.collection('infohack');
+const col2 = db.collection('orderinfo');
+
 
 
 
@@ -65,6 +67,26 @@ app.delete('/delete', async (req, res) => {
 
     try {
         const result = await col1.deleteOne({ "num": req.query.name });
+
+        if (result.deletedCount === 1) {
+            res.send("Deleted successfully");
+            console.log("done");
+        } else {
+            res.send("No matching document found");
+            console.log("no");
+
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+app.post('/BookIn', async (req, res) => {
+    console.log(req.query.name);
+
+    try {
+        const result = await col2.insertOne({ "num": req.query.name });
 
         if (result.deletedCount === 1) {
             res.send("Deleted successfully");
