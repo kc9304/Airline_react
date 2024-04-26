@@ -11,8 +11,6 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom';
-import config from '../config';
-
 
 
 const Admin = () => {
@@ -29,7 +27,7 @@ const Admin = () => {
         const flightClass = document.getElementById('class').value;
 
 
-        axios.post(`${config.url}/coninsert`, {
+        axios.post('http://localhost:8082/coninsert', {
             desname1: desname1,
             ariname1: ariname1,
             date1: date1,

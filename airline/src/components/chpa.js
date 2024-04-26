@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import REG from './images/reg.jpg';
 import './reg.css';
-import config from '../config';
 
 const Chpa = () => {
   const [username, setUsername] = useState('');
@@ -10,7 +9,7 @@ const Chpa = () => {
 
   const handleChangePassword = async () => {
     try {
-      const response = await fetch(`${config.url}/updatepassword`, {
+      const response = await fetch('http://localhost:8082/updatepassword', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

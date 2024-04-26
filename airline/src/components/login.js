@@ -4,7 +4,6 @@ import './App.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-import config from '../config';
 
 
 
@@ -15,7 +14,7 @@ import config from '../config';
 
 
   const Handlesubmit = () => {
-    axios.post(`${config.url}/check`, {
+    axios.post('http://localhost:8082/check', {
     un: document.getElementById("idun").value,
     pw: document.getElementsByName("pw")[0].value,
   }).then((res) => {

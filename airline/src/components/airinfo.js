@@ -12,8 +12,6 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
-import config from '../config';
-
 
 
 const Airinfo = () => {
@@ -23,7 +21,7 @@ const Airinfo = () => {
     //state full component rerenders 2 times when ever data is changed
     //will wait till it gets data
     if(r==null){
-     axios.get(`${config.url}/show`,{
+     axios.get('http://localhost:8082/show',{
        
      }).then((res)=>{
          console.log(res.data)
@@ -40,7 +38,7 @@ const Airinfo = () => {
     
     function handleDelete(event){
         alert(event.currentTarget.getAttribute("ref1"))
-        axios.delete(`${config.url}/delete`,{
+        axios.delete('http://localhost:8082/delete',{
           params:{
             name:event.currentTarget.getAttribute("ref1")
           }
