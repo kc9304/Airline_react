@@ -119,8 +119,14 @@ const Admin = () => {
                     </div>
                     <div style={{ height: "80vh", width: "100vw", display: "flex", justifyContent: "center", alignItems: "center", border: "1px solid red" }} className='insertdata'>
                         <div style={{ width: "50vw", height: "50vh", display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: "25vh" }} className='inside'>
-                            <h4 style={{ color: " rgb(251, 87, 28)" }}>Departure city</h4>
-                            <input type='text' id='desname1' placeholder='Select Departure city' ></input>
+                        <h4 style={{ color: "rgb(251, 87, 28)" }}>Departure city</h4>
+                            <select id="desname1">
+                                <option value="Goa">Goa</option>
+                                <option value="Vizag">Vizag</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Mumbai">Mumbai</option>
+                            </select>
+
                             <h4 style={{ color: "rgb(251, 87, 28)" }}>Arrival city</h4>
                             <input type='text' id='ariname1' placeholder='Select Arrival city' ></input>
                             <h4 style={{ color: "rgb(251, 87, 28)" }}>Departure Date</h4>

@@ -61,6 +61,10 @@ app.get('/show',async(req,res)=>{
     var result = await col1.find().toArray();
     res.send(result);
 })
+app.get('/show1',async(req,res)=>{
+    var result = await col2.find().toArray();
+    res.send(result);
+})
 
 app.delete('/delete', async (req, res) => {
     console.log(req.query.name);
@@ -82,25 +86,7 @@ app.delete('/delete', async (req, res) => {
     }
 });
 
-app.post('/BookIn', async (req, res) => {
-    console.log(req.query.name);
 
-    try {
-        const result = await col2.insertOne({ "num": req.query.name });
-
-        if (result.deletedCount === 1) {
-            res.send("Deleted successfully");
-            console.log("done");
-        } else {
-            res.send("No matching document found");
-            console.log("no");
-
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).send("Internal Server Error");
-    }
-});
 
 app.post('/admininsert', (req, res) => {
     if (req.body.desname == null) {
@@ -148,6 +134,17 @@ app.post('/updatepassword', async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
+app.post('/insertcustomerdata', (req, res) => {
+    console.log(req.body);
+    if (!req.body.fname) {
+        res.send("fail");
+    } else {
+        console.log(req.body);
+        col2.insertOne(req.body);
+        res.send("received data");
+    }
+});
+
 
 
 app.listen(8082, () => {

@@ -93,7 +93,7 @@ const Home = () => {
       
       <div className='header1'>
 
-        <div style={{display:"flex",justifyContent:"space-between",}} className="menu-links">
+        <div style={{display:"flex",justifyContent:"space-between",paddingTop:"10vh"}} className="menu-links">
         <div  class="dropdown1 ">
       <button style={{backgroundColor:"black",fontSize:"1vw"}} className="dropbtn1">CONTENT IN THE PAGE   <FontAwesomeIcon style={{color:"white",paddingRight:"30px",height:"1.3vh"}} icon={faArrowRight} /> </button>
     

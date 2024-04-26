@@ -9,6 +9,12 @@ import Flight from './components/bookticket';
 import Admin from './components/admin';
 import Airinfo from './components/airinfo';
 import Orderd from './components/orderdetails';
+import Update from './components/update';
+import Success from './components/success';
+import Orderf from './components/orderf';
+
+
+
 
 
 
@@ -31,6 +37,12 @@ function App() {
           <Route path="/admin" element={<Admin />}/>    
           <Route path="/airinfo" element={<Airinfo />}/>
           <Route path="/orderd" element={<Orderd />}/>  
+          <Route path="/update" element={<Update />}/>  
+          <Route path="/success" element={<Success />}/>
+          <Route path="/orderf" element={<Orderf />}/>  
+  
+
+
   
 
 

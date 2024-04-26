@@ -4,7 +4,6 @@ import Logo from './images/logo.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -15,7 +14,6 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 
 const Airinfo = () => {
-    const navigate = useNavigate();
     var username=localStorage.getItem("un")
     const [r,setR]=useState(null)
     //state full component rerenders 2 times when ever data is changed
@@ -29,25 +27,26 @@ const Airinfo = () => {
          //data bcz dictionary
      })  
    }
-   function handleUpdate() {
-    navigate('/update');
-   }
+
     function deletefun() {
         localStorage.removeItem('a', 'null');
     }
     
-    function handleDelete(event){
-        alert(event.currentTarget.getAttribute("ref1"))
-        axios.delete('http://localhost:8082/delete',{
-          params:{
-            name:event.currentTarget.getAttribute("ref1")
-          }
-          //params to send data from get
+
+    function handleUpdateS() {
+        console.log("Updating flight with ID:", document.getElementById("uid").value);
+        console.log("Updated departure time:", document.getElementById("utime").value);
     
-        }).then ( (res)=>{
-          console.log(res.data)
-        })
-      }
+        axios.put('http://localhost:8082/update', {
+            utime: document.getElementById("utime").value,
+            uid: document.getElementById("uid").value,
+        }).then((res) => {
+            console.log(res.data);
+        }).catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+    
     if(r!=null){
     return (
         <div className='body'>
@@ -61,7 +60,8 @@ const Airinfo = () => {
                                 <button style={{ backgroundColor: "black", paddingRight: "10px", fontSize: "1vw" }} className="dropbtn">PROFILE
                                 </button>
                                 <div style={{ backgroundColor: "black" }} class="dropdown-content">
-                                    <a style={{ color: "white", fontSize: "1vw" }} href="#">check orders</a>
+                                    <a style={{ color: "white", fontSize: "1vw" }} href="#">User info</a>
+                                    <a style={{ color: "white", fontSize: "1vw" }} href="/orderf">check orders</a>
                                     <a style={{ color: "white", fontSize: "1vw" }} href="/chpa">change password</a>
                                     <a style={{ color: "white", fontSize: "1vw" }} href="/admin">Add Airline</a>
 
@@ -86,7 +86,7 @@ const Airinfo = () => {
                 <div style={{ marginTop: "3vh", color: "black", width: "100%", height: "9vh", position: "relative" }} className='header1'>
                     <img style={{ width: "100%", height: "9vh" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpaWlQcSrC9WwW8bm593kYxfHt1X77LKwHzA&usqp=CAU' alt='image' />
                     <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
-                        <h3 style={{ fontFamily: "monospace", fontSize: "25px",fontSize:"1.5vw" }}>Airline Details</h3>
+                        <h3 style={{ fontFamily: "monospace", fontSize: "25px",fontSize:"1.5vw" }}>Airline Details & Update</h3>
                     </div>
                 </div>
                 <div style={{width:"90vw",marginLeft:"5vw",marginTop:"3vh"}}>
@@ -99,7 +99,7 @@ const Airinfo = () => {
             <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Departure Date</th>
             <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Airline Name</th>
             <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Airline Time</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Delete</th>
+
 
         </tr>
     </thead>
@@ -112,17 +112,25 @@ const Airinfo = () => {
                 <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.date}</td>
                 <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.airline}</td>
                 <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.time}</td>
-                <td><button style={{backgroundColor:"transparent",borderRadius:"30px",color:"white",fontSize:"1vw" }} onClick={handleDelete} ref1={user.num}>delete</button></td>
 
             </tr>
         ))}
     </tbody>
 </table>
 </div>
-<div style={{width:"95vw",height:"20vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
-    <button onClick={handleUpdate} style={{backgroundColor:"transparent",color:"white",cursor:"pointer",backgroundColor:"rgb(251, 87, 28)",fontSize:"1vw"}}>Update</button>
-</div>
-<div style={{height:"30vh",width:"100vw",marginTop:"40vh"}} className='fotter'>
+
+<div style={{width:"95vw",height:"20vh",display:"flex",justifyContent:"center",alignItems:"center",paddingTop:"7vh"}}>
+        <div >
+        <h4 style={{color:" rgb(251, 87, 28)",fontSize:"1.5vw"}}>Enter Flight Id</h4>
+            <input type='text' id='uid'placeholder='Enter ID '></input>
+<h4 style={{color:" rgb(251, 87, 28)",fontSize:"1.5vw"}}>Update Departure time</h4>
+            <input type='text' id='utime'placeholder='Enter Updated time'  ></input>
+            </div>
+            </div>
+            <div style={{width:"95vw",height:"20vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
+    <button onClick={handleUpdateS} style={{backgroundColor:"transparent",color:"white",cursor:"pointer",backgroundColor:"rgb(251, 87, 28)",fontSize:"1vw"}}>Update</button>
+    </div>
+<div style={{height:"30vh",width:"100vw",marginTop:"25vh"}} className='fotter'>
     <footer class="footer-distributed">
               <div class="footer-left">
                   <h3 style={{fontSize:"2vw"}}>KC<span>AIRLINES</span></h3>

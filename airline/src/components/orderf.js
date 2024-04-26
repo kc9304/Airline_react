@@ -14,14 +14,14 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 
-const Airinfo = () => {
+const Orderf = () => {
     const navigate = useNavigate();
     var username=localStorage.getItem("un")
     const [r,setR]=useState(null)
     //state full component rerenders 2 times when ever data is changed
     //will wait till it gets data
     if(r==null){
-     axios.get('http://localhost:8082/show',{
+     axios.get('http://localhost:8082/show1',{
        
      }).then((res)=>{
          console.log(res.data)
@@ -35,19 +35,6 @@ const Airinfo = () => {
     function deletefun() {
         localStorage.removeItem('a', 'null');
     }
-    
-    function handleDelete(event){
-        alert(event.currentTarget.getAttribute("ref1"))
-        axios.delete('http://localhost:8082/delete',{
-          params:{
-            name:event.currentTarget.getAttribute("ref1")
-          }
-          //params to send data from get
-    
-        }).then ( (res)=>{
-          console.log(res.data)
-        })
-      }
     if(r!=null){
     return (
         <div className='body'>
@@ -61,7 +48,7 @@ const Airinfo = () => {
                                 <button style={{ backgroundColor: "black", paddingRight: "10px", fontSize: "1vw" }} className="dropbtn">PROFILE
                                 </button>
                                 <div style={{ backgroundColor: "black" }} class="dropdown-content">
-                                    <a style={{ color: "white", fontSize: "1vw" }} href="#">check orders</a>
+                                <a style={{color:"white",fontSize:"1vw"}} href="/airinfo">Airline info</a>
                                     <a style={{ color: "white", fontSize: "1vw" }} href="/chpa">change password</a>
                                     <a style={{ color: "white", fontSize: "1vw" }} href="/admin">Add Airline</a>
 
@@ -86,42 +73,45 @@ const Airinfo = () => {
                 <div style={{ marginTop: "3vh", color: "black", width: "100%", height: "9vh", position: "relative" }} className='header1'>
                     <img style={{ width: "100%", height: "9vh" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpaWlQcSrC9WwW8bm593kYxfHt1X77LKwHzA&usqp=CAU' alt='image' />
                     <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", textAlign: "center" }}>
-                        <h3 style={{ fontFamily: "monospace", fontSize: "25px",fontSize:"1.5vw" }}>Airline Details</h3>
+                        <h3 style={{ fontFamily: "monospace", fontSize: "25px",fontSize:"1.5vw" }}>Customer Details</h3>
                     </div>
                 </div>
                 <div style={{width:"90vw",marginLeft:"5vw",marginTop:"3vh"}}>
                 <table style={{ color: "blue", border: "1px solid white", width: "100%", borderCollapse: "collapse" }}>
     <thead style={{ backgroundColor: "black", color: "white" }}>
         <tr>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" ,fontSize:"1.5vw" }}>ID</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Departure City</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Arrival City</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Departure Date</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Airline Name</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Airline Time</th>
-            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Delete</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)" ,fontSize:"1.5vw" }}>First Name</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Middle Name</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Last Name</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Address</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Pincode</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Phone Number</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Altr Phn</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>City</th>
+            <th style={{ border: "1px solid white", padding: "8px",color:"rgb(251, 87, 28)",fontSize:"1.5vw"  }}>Flight ID</th>
+
+
 
         </tr>
     </thead>
     <tbody>
     {r.map((user) => (
             <tr key={user._id}>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw" }}>{user.num}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.desname}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.ariname}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.date}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.airline}</td>
-                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.time}</td>
-                <td><button style={{backgroundColor:"transparent",borderRadius:"30px",color:"white",fontSize:"1vw" }} onClick={handleDelete} ref1={user.num}>delete</button></td>
-
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw" }}>{user.fname}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.mname}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.lname}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.add}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.pin}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.phn}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.aphn}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.city}</td>
+                <td style={{ border: "1px solid white", padding: "8px",color:"white",fontSize:"1vw"  }}>{user.b}</td>
             </tr>
         ))}
     </tbody>
 </table>
 </div>
-<div style={{width:"95vw",height:"20vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
-    <button onClick={handleUpdate} style={{backgroundColor:"transparent",color:"white",cursor:"pointer",backgroundColor:"rgb(251, 87, 28)",fontSize:"1vw"}}>Update</button>
-</div>
+
 <div style={{height:"30vh",width:"100vw",marginTop:"40vh"}} className='fotter'>
     <footer class="footer-distributed">
               <div class="footer-left">
@@ -203,4 +193,4 @@ else{
 }
 
 
-export default Airinfo;
+export default Orderf;

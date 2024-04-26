@@ -7,10 +7,33 @@ import { faInstagram, faFacebook, faTwitter, faGithub } from '@fortawesome/free-
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import Razorpay from 'razorpay';
+import axios from 'axios';
 const Orderd = () => {
-   
+    const navigate = useNavigate();
+
     const paymentHandler = async (event) => {
 
+        axios.post('http://localhost:8082/insertcustomerdata',{
+            fname: document.getElementById("firstName").value,
+            mname: document.getElementById("middleName").value,
+            lname: document.getElementById("lastName").value,
+            add: document.getElementById("address").value,
+            pin: document.getElementById("pincode").value,
+            phn: document.getElementById("phoneNumber").value,
+            aphn: document.getElementById("alternativePhone").value,
+            city: document.getElementById("city").value,
+            b:localStorage.getItem("airID")
+        }).then((res)=>{
+            console.log(res.data);
+            if (res.data === "received data") {
+                console.log("received");
+              }
+               else {
+                console.log("not inserted");
+              }
+              
+
+        })
         const amount = 500000;
         const currency = 'INR';
         const receiptId = '1234567890';
@@ -53,7 +76,7 @@ const Orderd = () => {
               })
     
               const jsonResponse = await validateResponse.json();
-    
+             
               console.log('jsonResponse', jsonResponse);
               
             },
@@ -80,11 +103,11 @@ const Orderd = () => {
             alert(response.error.metadata.order_id);
             alert(response.error.metadata.payment_id);
           })
-    
+          navigate('/success');
+
           rzp1.open();
           event.preventDefault();
       }
-    const navigate = useNavigate();
 
     function scrollTopage() {
         const elements = document.getElementsByClassName("header1");
@@ -111,9 +134,9 @@ const Orderd = () => {
                         <div className="navbar">
                             <div className="dropdown">
                                 <button  style={{backgroundColor:"black"}}className="dropbtn">PROFILE</button>
-                                <div className="dropdown-content">
-                                    <a style={{ color: "white", fontSize: "1vw" }} href="/home">profile</a>
-                                    <a style={{ color: "white", fontSize: "1vw" }} href="#">check orders</a>
+                                <div style={{ backgroundColor: "black" }} class="dropdown-content">
+                                    <a style={{ color: "white", fontSize: "1vw", }} href="/home">profile</a>
+                                    <a style={{ color: "white", fontSize: "1vw" }} href="/orderf">check orders</a>
                                     <a style={{ color: "white", fontSize: "1vw" }} href="/chpa">change password</a>
                                     <a onClick={deletefun} style={{ color: "white", fontSize: "1vw" }} href="/">Logout</a>
                                 </div>
