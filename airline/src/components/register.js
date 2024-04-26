@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import REG from './images/reg.jpg';
 import './reg.css';
+import config from '../config';
 
 const Register = () => {
  
@@ -9,7 +10,7 @@ const Register = () => {
   const handleRegister = async () => {
 
     try {
-      const response = await axios.post('http://localhost:8082/insert', {
+      const response = await axios.post(`${config.url}/insert`, {
         name:  document.getElementById("idun").value,
         email:  document.getElementById("idemail").value,
         password: document.getElementById("idpw").value,

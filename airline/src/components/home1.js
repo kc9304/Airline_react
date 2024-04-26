@@ -15,6 +15,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import Plane from './images/plane.png';
 import Video from './images/video.mp4';
 
+import config from '../config';
 
 
   

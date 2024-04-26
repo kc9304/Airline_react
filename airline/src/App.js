@@ -12,6 +12,14 @@ import Orderd from './components/orderdetails';
 import Update from './components/update';
 import Success from './components/success';
 import Orderf from './components/orderf';
+import config from './config';
+
+
+
+
+
+
+
 
 //first letter captail
 function App() {

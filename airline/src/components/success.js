@@ -6,6 +6,8 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faFacebook, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import config from '../config';
+
 const success = () => {
     function scrollTopage() {
         const elements = document.getElementsByClassName("header1");

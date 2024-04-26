@@ -8,12 +8,14 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import Razorpay from 'razorpay';
 import axios from 'axios';
+import config from '../config';
+
 const Orderd = () => {
     const navigate = useNavigate();
 
     const paymentHandler = async (event) => {
 
-        axios.post('http://localhost:8082/insertcustomerdata',{
+        axios.post(`${config.url}/insertcustomerdata`,{
             fname: document.getElementById("firstName").value,
             mname: document.getElementById("middleName").value,
             lname: document.getElementById("lastName").value,
@@ -38,7 +40,7 @@ const Orderd = () => {
         const currency = 'INR';
         const receiptId = '1234567890';
     
-        const response = await fetch('http://localhost:8082/order', {
+        const response = await fetch(`${config.url}/order`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -66,7 +68,7 @@ const Orderd = () => {
               
               const body = {...response,}
     
-              const validateResponse = await fetch('http://localhost:8082/validate', {
+              const validateResponse = await fetch(`${config.url}/validate`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
