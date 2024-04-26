@@ -38,7 +38,7 @@ const Orderd = () => {
         const currency = 'INR';
         const receiptId = '1234567890';
     
-        const response = await fetch('http://localhost:5000/order', {
+        const response = await fetch('http://localhost:8082/order', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ const Orderd = () => {
               
               const body = {...response,}
     
-              const validateResponse = await fetch('http://localhost:5000/validate', {
+              const validateResponse = await fetch('http://localhost:8082/validate', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'

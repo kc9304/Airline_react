@@ -13,14 +13,6 @@ import Update from './components/update';
 import Success from './components/success';
 import Orderf from './components/orderf';
 
-
-
-
-
-
-
-
-
 //first letter captail
 function App() {
   function Page(){
