@@ -11,6 +11,7 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import config from '../config';
 
 
 const Airinfo = () => {
@@ -19,7 +20,7 @@ const Airinfo = () => {
     //state full component rerenders 2 times when ever data is changed
     //will wait till it gets data
     if(r==null){
-     axios.get('http://localhost:8082/show',{
+     axios.get(`${config.url}/show`,{
        
      }).then((res)=>{
          console.log(res.data)
@@ -37,7 +38,7 @@ const Airinfo = () => {
         console.log("Updating flight with ID:", document.getElementById("uid").value);
         console.log("Updated departure time:", document.getElementById("utime").value);
     
-        axios.put('http://localhost:8082/update', {
+        axios.put(`${config.url}/update`, {
             utime: document.getElementById("utime").value,
             uid: document.getElementById("uid").value,
         }).then((res) => {

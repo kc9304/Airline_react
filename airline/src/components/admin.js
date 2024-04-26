@@ -10,12 +10,14 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import config from '../config';
+
 
 const admin = () => {
     var a= localStorage.getItem("un")
 
     function handleSubmit(){
-        axios.post('http://localhost:8082/admininsert',{
+        axios.post(`${config.url}/admininsert`,{
         desname : document.getElementById('desname').value,
          ariname : document.getElementById('ariname').value,
          date : document.getElementById('date').value,
