@@ -12,6 +12,7 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import config from '../config';
 
 
 const Orderf = () => {
@@ -21,7 +22,7 @@ const Orderf = () => {
     //state full component rerenders 2 times when ever data is changed
     //will wait till it gets data
     if(r==null){
-     axios.get('http://localhost:8082/show1',{
+     axios.get(`${config.url}/show1`,{
        
      }).then((res)=>{
          console.log(res.data)
